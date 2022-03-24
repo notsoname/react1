@@ -2,51 +2,75 @@ import Cards from '../../components/cards';
 import SearchPannel from '../../components/searchPannel';
 
 export interface Idata {
-  name: string;
+  title: string;
   img: string;
-  text: string;
+  overview: string;
 }
 
 const HomePage = () => {
   const data: Idata[] = [
     {
-      img: '/e1mjopzAS2KNsvpbpahQ1a6SkSn.jpg',
-      text: 'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.',
-      name: 'Suicide Squad',
+      img: '/wPU78OPN4BYEgWYdXyg0phMee64.jpg',
+      overview:
+        'Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.',
+      title: 'The Shawshank Redemption',
     },
     {
-      img: '/lFSSLTlFozwpaGlO31OoUeirBgQ.jpg',
-      text: 'The most dangerous former operative of the CIA is drawn out of hiding to uncover hidden truths about his past.',
-      name: 'Jason Bourne',
+      img: '/90ez6ArvpO8bvpyIngBuwXOqJm5.jpg',
+      overview:
+        'Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.',
+      title: 'Dilwale Dulhania Le Jayenge',
     },
     {
-      img: '/hU0E130tsGdsYa4K9lc3Xrn5Wyt.jpg',
-      text: 'One year after outwitting the FBI and winning the public’s adulation with their mind-bending spectacles, the Four Horsemen resurface only to find themselves face to face with a new enemy who enlists them to pull off their most dangerous heist yet.',
-      name: 'Now You See Me 2',
+      img: '/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg',
+      overview:
+        'Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.',
+      title: 'The Godfather',
     },
     {
-      img: '/h28t2JNNGrZx0fIuAw8aHQFhIxR.jpg',
-      text: 'A recently cheated on married woman falls for a younger man who has moved in next door, but their torrid affair soon takes a dangerous turn.',
-      name: 'The Boy Next Door',
+      img: '/lp6SmwyNRspEYkkLXFEVuNlCw77.jpg',
+      overview:
+        'As the world moves on from the war and technological advances bring changes to her life, Violet still hopes to see her lost commanding officer again.',
+      title: 'Violet Evergarden: The Movie',
     },
     {
-      img: '/vOipe2myi26UDwP978hsYOrnUWC.jpg',
-      text: 'An orphan boy is raised in the Jungle with the help of a pack of wolves, a bear and a black panther.',
-      name: 'The Jungle Book',
+      img: '/v5CEt88iDsuoMaW1Q5Msu9UZdEt.jpg',
+      overview:
+        "A tragic accident lead to Kaori's blindness, but she clings to life and the smaller pleasures it can still afford her. She meets Rui and begins to talk to him. Rui was once a promising kickboxer, but something happened in his past. Kaori's smile brings out a change in Rui. However, the two are connected in more than one way. Rui attempts to do what is right.",
+      title: 'Your Eyes Tell',
     },
     {
-      img: '/tgfRDJs5PFW20Aoh1orEzuxW8cN.jpg',
-      text: 'Arthur Bishop thought he had put his murderous past behind him when his most formidable foe kidnaps the love of his life. Now he is forced to travel the globe to complete three impossible assassinations, and do what he does best, make them look like accidents.',
-      name: 'Mechanic: Resurrection',
+      img: '/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg',
+      overview:
+        'The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.',
+      title: "Schindler's List",
+    },
+    {
+      img: '/3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg',
+      overview:
+        'Rihito Sajo, an honor student with a perfect score on the entrance exam and Hikaru Kusakabe, in a band and popular among girls, would have never crossed paths. Until one day they started talking at the practice for their school’s upcoming chorus festival. After school, the two meet regularly, as Hikaru helps Rihito to improve his singing skills. While they listen to each other’s voice and harmonize, their hearts start to beat together.',
+      title: 'Dou kyu sei – Classmates',
+    },
+    {
+      img: '/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg',
+      overview:
+        "Professor Gabriel Emerson finally learns the truth about Julia Mitchell's identity, but his realization comes a moment too late. Julia is done waiting for the well-respected Dante specialist to remember her and wants nothing more to do with him. Can Gabriel win back her heart before she finds love in another's arms?",
+      title: "Gabriel's Inferno Part II",
+    },
+    {
+      img: '/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg',
+      overview:
+        'In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.',
+      title: 'The Godfather: Part II',
     },
   ];
 
   return (
     <>
       <SearchPannel />
-      <div className="d-flex justify-content-center flex-wrap pt-4">
+      <div className="d-flex justify-content-center flex-wrap pt-4 gap-3">
         {data.map((card) => (
-          <Cards key={card.img} name={card.name} img={card.img} text={card.text} />
+          <Cards key={card.img} title={card.title} img={card.img} overview={card.overview} />
         ))}
       </div>
     </>
